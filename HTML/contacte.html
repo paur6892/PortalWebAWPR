@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Contacta amb l'IES Sineu — formulari de contacte." />
+  <title>IES Sineu — Contacte</title>
+
+  <link rel="stylesheet" href="CSS/normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+  <link rel="preload" href="../CSS/styles.css" as="style">
+  <link rel="stylesheet" href="../CSS/styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner container">
+      <a class="logo" href="index.html" aria-label="Anar a la pàgina inicial">
+        <img src="../IMG/logo_institut.png" alt="Logotip de l'IES Sineu" width="56" height="56" />
+      </a>
+
+      <div class="title-and-nav">
+        <h1 class="school-title">IES Sineu</h1>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-menu container" aria-label="Navegació principal">
+    <ul>
+      <li><a href="index.html">Inici</a></li>
+      <li><a href="about.html">Sobre el centre</a></li>
+      <li><a href="estudis.html">Estudis</a></li>
+      <li><a href="galeria.html">Galeria</a></li>
+      <li><a href="contacte.html">Contacte</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <div class="containerform">
+    <div class="containercontacte">
+    <h2>CONTACTE</h2>
+    <p>Omple el formulari per contactar amb el centre.</p>
+    </div>
+<form id="contact-form" method="post">
+    <div class="form-group-inline">
+        <div class="form-row">
+            <label for="nom">Nom complet</label>
+            <input id="nom" name="nom" type="text" required aria-required="true" autocomplete="name" />
+        </div>
+
+        <div class="form-row">
+            <label for="tel">Telèfon</label>
+            <input id="tel" name="tel" type="tel" autocomplete="tel" required aria-required="true"/>
+        </div>
+    </div>
+    <div class="form-row">
+        <label for="email">Correu electrònic</label>
+        <input id="email" name="email" type="email" required aria-required="true" autocomplete="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" />
+    </div>
+
+    <div class="form-row">
+        <label for="missatge">Missatge</label>
+        <textarea id="missatge" name="missatge" rows="6" required aria-required="true" autocomplete="off"></textarea>
+    </div>
+
+    <div class="form-row">
+        <button class="btn btn-primary" type="submit">Enviar</button>
+    </div>
+
+    <div id="form-feedback" role="status" aria-live="polite" class="form-feedback" hidden></div>
+</form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-line footer-line-1">Pau Rocha Aranalde</div>
+      <div class="footer-line footer-line-2">
+        <abbr title="Institut d'Educació Pública de Sineu (Mallorca)" class="footer-abbr">IES Sineu</abbr>, 2025 | Per a l'assignatura d'Aplicacions Web
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
